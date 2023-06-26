@@ -28,3 +28,34 @@ pip install <library name>
 •	google-python-api-client
 •	pandas
 •	mysql-connector-python
+
+WORKFLOW
+Application Interface
+ 
+1.	Enter Channel ID/s (comma separated list , maximum 10 values)
+ 
+•	Input from here will be sent to youtube API to request for channel information
+
+2.	Click on Retrieve Channel Data button
+ 
+•	Relevant channel details will displayed in the form of a table.(Scroll to view the complete details)
+
+3.	Click on Move to MongoDB Atlas button to move data to MongoDB Atlas.
+ 
+This action will move the data to Mongo DB and store it in form of embedded document.
+ 
+
+4.	Click on Move data to My SQL to move data to SQL tables(Channel,Playlist,Video and Comment)
+ 
+ 
+
+5.	From Query selection drop down, select what result needs to be displayed on screen.You Can select multiple options.
+
+ 
+
+
+Sample Outputs:
+ 
+
+
+ 
