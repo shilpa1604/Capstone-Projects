@@ -6,9 +6,9 @@ import pandas as pd
 import mysql.connector
 
 # MongoDB Atlas connection credentials
-atlas_username = 'shilpagupta1604'
-atlas_password = 'kUuCrHpXWfmVuciS'
-atlas_cluster = 'cluster0'
+atlas_username = '???'
+atlas_password = '???'
+atlas_cluster = '???'
 
 # Connecting to MongoDB Atlas Client
 client = mong.MongoClient(
@@ -26,10 +26,7 @@ youtube_data_collection = db['YouTube_Data']
 
 scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
 
-api_service_name = "youtube"
-api_version = "v3"
-api_key = 'AIzaSyD4jRmL_nt6poMbCSdfLkYGUEi1U6e6Fhw'
-youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=api_key)
+
 
 
 #Function to check if key is present in the google data, If the corresponding key(data) id not present, 0 is returned.
@@ -44,8 +41,8 @@ def check_value(x, y):
 def connect_mysql():
     mysql_host = 'localhost'
     mysql_database = 'Youtube'
-    mysql_user = 'root'
-    mysql_password = 'shilpa'
+    mysql_user = '???'
+    mysql_password = '???'
     mysql_connection = mysql.connector.connect(host=mysql_host,
                                                database=mysql_database,
                                                user=mysql_user,
@@ -58,7 +55,7 @@ def connect_mysql():
 def youtube_api():
     api_service_name = "youtube"
     api_version = "v3"
-    api_key = 'AIzaSyD4jRmL_nt6poMbCSdfLkYGUEi1U6e6Fhw'
+    api_key = '???'
     youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=api_key)
     return youtube
 
