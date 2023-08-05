@@ -389,10 +389,10 @@ def query1():
 def query2():
     mysql_connection = connect_mysql()
     cursor = mysql_connection.cursor()
-    cursor.execute('''select c.channel_name,v.video_count from Youtube.channel c, Youtube.playlist p, 
+    cursor.execute('''select c.channel_name,sum(v.video_count) as video_count from Youtube.channel c, Youtube.playlist p, 
         (select playlist_id ,a.video_count,dense_rank() over (order by a.video_count desc) as rnk  from (select 
         playlist_id,count(*) as  video_count from Youtube.video group by playlist_id)a)v where v.rnk=1 and 
-        p.playlist_id=v.playlist_id and p.channel_id=c.channel_id''')
+        p.playlist_id=v.playlist_id and p.channel_id=c.channel_id group by c.channel_name''')
 
     x = cursor.fetchall()
     y = pd.DataFrame(x)
